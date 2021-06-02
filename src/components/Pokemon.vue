@@ -6,7 +6,22 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+    created: function(){
+      axios.get(this.url).then(res => {
+         this.pokemon.front = res.data.sprites.front_default
+        this.pokemon.back = res.data.sprites.back_default
+
+        this.pokemon.type = res.data.types[0].type.name
+        console.log(this.pokemon)
+      })
+    },
+    data(){
+      return{
+        pokemon: {}
+      }
+    },
   props: {
     num: Number,
     url: String,
