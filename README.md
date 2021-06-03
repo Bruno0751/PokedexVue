@@ -5,6 +5,16 @@
 npm install
 ```
 
+## Project setup use
+```
+npm install bulma
+```
+
+## Project setup use
+```
+npm install axios
+``` 
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
