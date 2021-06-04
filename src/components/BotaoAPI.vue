@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="buttons">
-      <button class="button is-link" style="width: 100%">
+      <button class="button is-link is-rounded" style="width: 100%">
         <a
           href="https://pokeapi.co/"
           target="_blank"

@@ -1,25 +1,22 @@
 <template>
   <div id="app">
     <div class="column is-half is-offset-one-quarter">
-      <LogoAPI />
-      <Api />
+      <LogoAPI id="logo" />
+      <Api id="api" />
       <div class="control">
         <input
           name="txtNomePokemon"
           id="buscarPokemon"
-          class="input is-focused"
+          class="input is-focused is-rounded"
           type="text"
           placeholder="Buscar Pokemon"
           v-model="buscar"
-          style="text-align: center; border-radius: 11px"
+          style="text-align: center;"
         />
       </div>
-      <!--
-        COENTÁRIO NECESSÁRIO PARA RETORNAR DADOS DA BUSCA, POIS FUNÇÃO JS ESTA COMENTADA
       <div class="buttons">
-        <button class="button is-success" @click="buscarPokemons">Success</button>
+        <button class="button is-success is-fullwidth is-rounded" @click="buscarPokemons">Pesquisar</button>
       </div>
-      -->
       <!--
         O :KEY DO V-FOR PRECISA SER UNICO NO CASO É PASSADO COMO CHACVE A URL
       -->
@@ -61,7 +58,6 @@ export default {
       });
   },
   // PESQUISAR COM BOTÃO
-  /*
   methods: {
     buscarPokemons() {
       this.filteredPokemons = this.pokemons;
@@ -74,7 +70,6 @@ export default {
       }
     },
   },
-  */
   // PESQUISA AUTOMÁTICA
   computed: {
     resultadoBusca: function () {
@@ -96,7 +91,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: rgb(108, 213, 245);
+  background: linear-gradient(90deg, rgba(0,23,255,1) 3%, rgba(255,0,0,1) 50%, rgba(254,255,0,1) 100%);
   margin: 0;
+}
+#logo, #api{
+    margin: 11px 0;
 }
 </style>

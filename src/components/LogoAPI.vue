@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/pokemon.png" alt="Pokemon" />
+    <img src="../assets/pokemon.png" alt="Pokemon"/>
   </div>
 </template>
 
@@ -10,4 +10,5 @@ export default {};
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>
