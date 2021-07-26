@@ -11,11 +11,16 @@
           type="text"
           placeholder="Buscar Pokemon"
           v-model="buscar"
-          style="text-align: center;"
+          style="text-align: center"
         />
       </div>
       <div class="buttons">
-        <button class="button is-success is-fullwidth is-rounded" @click="buscarPokemons">Pesquisar</button>
+        <button
+          class="button is-success is-fullwidth is-rounded"
+          @click="buscarPokemons"
+        >
+          Pesquisar
+        </button>
       </div>
       <!--
         O :KEY DO V-FOR PRECISA SER UNICO NO CASO É PASSADO COMO CHACVE A URL
@@ -30,8 +35,8 @@
 <script>
 import axios from "axios";
 import Pokemon from "./components/Pokemon";
-import Api from './components/BotaoAPI'
-import LogoAPI from './components/LogoAPI'
+import Api from "./components/BotaoAPI";
+import LogoAPI from "./components/LogoAPI";
 export default {
   name: "App",
   components: {
@@ -91,10 +96,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background: linear-gradient(90deg, rgba(0,23,255,1) 3%, rgba(255,0,0,1) 50%, rgba(254,255,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 23, 255, 1) 3%,
+    rgba(255, 0, 0, 1) 50%,
+    rgba(254, 255, 0, 1) 100%
+  );
   margin: 0;
 }
-#logo, #api{
-    margin: 11px 0;
+#logo,
+#api {
+  margin: 11px 0;
 }
 </style>

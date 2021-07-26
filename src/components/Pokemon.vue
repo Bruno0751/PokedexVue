@@ -3,10 +3,7 @@
     <div class="card">
       <div class="card-image">
         <figure>
-          <img
-            :src="currentIMG "
-            alt="Placeholder image"
-          />
+          <img :src="currentIMG" alt="Placeholder image" />
         </figure>
       </div>
       <div class="card-content">
@@ -17,7 +14,12 @@
           </div>
         </div>
         <div class="content">
-          <button class="button is-fullwidth is-primary is-light" @click="mudarSprite()">Mudar Posição</button>
+          <button
+            class="button is-fullwidth is-primary is-light"
+            @click="mudarSprite()"
+          >
+            Mudar Posição
+          </button>
         </div>
       </div>
     </div>
@@ -40,12 +42,12 @@ export default {
   data() {
     return {
       isFront: true,
-      currentIMG: '',
+      currentIMG: "",
       pokemon: {
-        front: '',
-        type: '',
-        back: ''
-        },
+        front: "",
+        type: "",
+        back: "",
+      },
     };
   },
   // DEFINE PROPS PARA RECEBER ELEMENTOS DE OUTROS COMPONENTES
@@ -63,22 +65,22 @@ export default {
   },
   // CRIAR FUNÇOES
   methods: {
-    mudarSprite(){
-      if(this.isFront){
-        this.isFront = false
-        this.currentIMG = this.pokemon.back
-      }else{
-        this.isFront = true
-        this.currentIMG = this.pokemon.front
+    mudarSprite() {
+      if (this.isFront) {
+        this.isFront = false;
+        this.currentIMG = this.pokemon.back;
+      } else {
+        this.isFront = true;
+        this.currentIMG = this.pokemon.front;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pokemon{
+.pokemon {
   margin-top: 11px;
 }
 </style>
