@@ -30,5 +30,10 @@ npm run build
 npm run lint
 ```
 
+### Project Version
+```
+16.20.0
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
